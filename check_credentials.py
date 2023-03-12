@@ -28,7 +28,7 @@ def check_credentials(username, password):
     login_button.click()
 
     # Waiting upload page for get content
-    timewait = 5
+    timewait = 10
     print("wait1 for {} seconds....".format(timewait))
     time.sleep(timewait)
     print("check = {}".format(driver.current_url)) 
@@ -39,7 +39,7 @@ def check_credentials(username, password):
         result = True
         driver.get("https://edu.enu.kz/v7/#/schedule/studentView")
         # Wait for the week div to appear
-        timewait = 8
+        timewait = 15
         time.sleep(timewait)        
         print("wait2 for {} seconds....".format(timewait))  
         content = driver.page_source
