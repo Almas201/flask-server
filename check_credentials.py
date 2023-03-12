@@ -12,8 +12,9 @@ def check_credentials(username, password):
     # Start the browser
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
-    options.binary_location = '../../usr/bin/google-chrome'
-    driver = webdriver.Chrome(options=options, executable_path='../../usr/bin/chromedriver')
+    options.add_argument('--no-sandbox')
+    options.binary_location = '/usr/bin/google-chrome'
+    driver = webdriver.Chrome(options=options, executable_path='/usr/bin/chromedriver')
     
     # Navigate to the website
     driver.get(BASE_URL)
