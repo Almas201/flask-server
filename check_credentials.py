@@ -10,11 +10,9 @@ def check_credentials(username, password):
     NEXT_PAGE = "https://edu.enu.kz/template.html#/welcome"
     
     # Start the browser
-    options = webdriver.ChromeOptions()
+    options = webdriver.FirefoxOptions()
     options.add_argument('--headless')
-    options.add_argument('--no-sandbox')
-    options.binary_location = '/usr/bin/'
-    driver = webdriver.Chrome(options=options, executable_path='/usr/bin/')
+    driver = webdriver.Firefox(options=options)
     
     # Navigate to the website
     driver.get(BASE_URL)
