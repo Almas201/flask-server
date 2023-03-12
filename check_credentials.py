@@ -39,7 +39,7 @@ def check_credentials(username, password):
         result = True
         driver.get("https://edu.enu.kz/v7/#/schedule/studentView")
         # Wait for the week div to appear
-        timewait = 15
+        timewait = 20
         time.sleep(timewait)        
         print("wait2 for {} seconds....".format(timewait))  
         content = driver.page_source
